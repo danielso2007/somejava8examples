@@ -1,4 +1,4 @@
-package br.com.somejava8examples.entities;
+package br.com.somejava8examples.commons.entities;
 
 import java.math.BigDecimal;
 import java.util.Objects;

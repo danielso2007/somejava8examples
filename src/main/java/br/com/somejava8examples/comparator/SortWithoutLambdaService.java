@@ -9,7 +9,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import br.com.somejava8examples.commons.CommonsService;
-import br.com.somejava8examples.entities.Developer;
+import br.com.somejava8examples.commons.entities.Developer;
 
 @Service
 public class SortWithoutLambdaService extends CommonsService<Developer> {
