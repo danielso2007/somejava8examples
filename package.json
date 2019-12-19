@@ -1,0 +1,26 @@
+{
+  "name": "somejava8examples",
+  "version": "0.0.1",
+  "description": "Apenas estudos do Java 8.",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielso2007/somejava8examples.git"
+  },
+  "keywords": [
+    "java",
+    "java8",
+    "java-8"
+  ],
+  "author": "Daniel Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielso2007/somejava8examples/issues"
+  },
+  "homepage": "https://github.com/danielso2007/somejava8examples#readme",
+  "devDependencies": {
+    "standard-version": "^7.0.1"
+  }
+}
