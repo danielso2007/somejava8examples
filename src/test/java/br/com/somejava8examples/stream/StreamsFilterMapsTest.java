@@ -1,4 +1,4 @@
-package br.com.somejava8examples.comparator;
+package br.com.somejava8examples.stream;
 
 import static org.springframework.util.Assert.isTrue;
 

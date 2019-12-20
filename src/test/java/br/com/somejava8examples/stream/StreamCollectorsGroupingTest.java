@@ -1,4 +1,4 @@
-package br.com.somejava8examples.comparator;
+package br.com.somejava8examples.stream;
 
 import br.com.somejava8examples.streams.StreamCollectorsGroupingService;
 import br.com.somejava8examples.streams.StreamsFilterMapService;
