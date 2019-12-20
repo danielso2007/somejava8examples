@@ -1,6 +1,6 @@
 {
   "name": "somejava8examples",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Apenas estudos do Java 8.",
   "scripts": {
     "release": "standard-version"
