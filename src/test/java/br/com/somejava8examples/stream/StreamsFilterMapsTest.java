@@ -1,13 +1,12 @@
 package br.com.somejava8examples.stream;
 
-import static org.springframework.util.Assert.isTrue;
-
+import br.com.somejava8examples.streams.StreamsFilterMapService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import br.com.somejava8examples.streams.StreamsFilterMapService;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -18,22 +17,22 @@ public class StreamsFilterMapsTest {
 
 	@Test
 	public void listOfStringsToUppercaseTest() {
-		isTrue(!service.listOfStringsToUppercase().isEmpty(), "List is empty");
+		assertFalse(service.listOfStringsToUppercase().isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void listOfObjectsListOfStringTest() {
-		isTrue(!service.listOfObjectsListOfString().isEmpty(), "List is empty");
+		assertFalse(service.listOfObjectsListOfString().isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void listOfObjectsListOfOtherObjectsTest() {
-		isTrue(!service.listOfObjectsListOfOtherObjects().isEmpty(), "List is empty");
+		assertFalse(service.listOfObjectsListOfOtherObjects().isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void convertInsideTheMapMethodDirectlyTest() {
-		isTrue(!service.convertInsideTheMapMethodDirectly().isEmpty(), "List is empty");
+		assertFalse(service.convertInsideTheMapMethodDirectly().isEmpty(), "List is empty");
 	}
 
 }
