@@ -25,6 +25,7 @@ if [[ -z "$1" ]] || [[ -z "$2" ]]; then
 else
     echo -e "${YELLOW}Branch:${NC} ${LIGHT_PURPLE}${BRANCH}${NC}"
     echo -e "${YELLOW}Version:${NC} ${LIGHT_PURPLE}${VERSION}${NC}"
+    git pull
     if [[ "$3" ]]; then
         echo -e "${YELLOW}Dry-run:${NC} ${LIGHT_PURPLE}YES${NC}"
         npm run release -- --release-as ${VERSION} --dry-run
