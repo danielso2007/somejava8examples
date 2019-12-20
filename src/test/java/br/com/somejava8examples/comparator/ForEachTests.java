@@ -21,6 +21,7 @@ public class ForEachTests {
 		isTrue(!service.normalWayToLoopMap().isEmpty(), "List is empty");
 	}
 
+	@Test
 	public void normalWayToLoopMapLambdaExpressionTest() {
 		isTrue(!service.normalWayToLoopMapLambdaExpression().isEmpty(), "List is empty");
 	}
