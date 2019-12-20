@@ -21,4 +21,19 @@ public class StreamCollectorsGroupingTest {
 		isTrue(!service.groupByCountAndSort().isEmpty(), "List is empty");
 	}
 
+	@Test
+	public void sortingTest() {
+		isTrue(!service.sorting().isEmpty(), "List is empty");
+	}
+
+	@Test
+	public void groupByTheNameCountOrSumtheQty() {
+		isTrue(!service.groupByTheNameCountOrSumtheQty().isEmpty(), "List is empty");
+	}
+
+	@Test
+	public void groupByPriceCollectorsGroupingByAndCollectorsMappingExample() {
+		isTrue(!service.groupByPriceCollectorsGroupingByAndCollectorsMappingExample().isEmpty(), "List is empty");
+	}
+
 }
