@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import static org.springframework.util.Assert.isTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -17,12 +17,12 @@ public class FilterANullValueFromAStreamTest {
 
     @Test
     public void normalWayToLoopMapTest() {
-        isTrue(!service.reviewAStreamContainingNullValues().isEmpty(), "List is empty");
+        assertFalse(service.reviewAStreamContainingNullValues().isEmpty(), "List is empty");
     }
 
     @Test
     public void toSolveItUsesStreamFilter() {
-        isTrue(!service.toSolveItUsesStreamFilter().isEmpty(), "List is empty");
+        assertFalse(service.toSolveItUsesStreamFilter().isEmpty(), "List is empty");
     }
 
 }

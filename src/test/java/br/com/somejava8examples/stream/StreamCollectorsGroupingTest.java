@@ -1,13 +1,12 @@
 package br.com.somejava8examples.stream;
 
 import br.com.somejava8examples.streams.StreamCollectorsGroupingService;
-import br.com.somejava8examples.streams.StreamsFilterMapService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import static org.springframework.util.Assert.isTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -18,22 +17,22 @@ public class StreamCollectorsGroupingTest {
 
 	@Test
 	public void groupByCountAndSortTest() {
-		isTrue(!service.groupByCountAndSort().isEmpty(), "List is empty");
+		assertFalse(service.groupByCountAndSort().isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void sortingTest() {
-		isTrue(!service.sorting().isEmpty(), "List is empty");
+		assertFalse(service.sorting().isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void groupByTheNameCountOrSumtheQty() {
-		isTrue(!service.groupByTheNameCountOrSumtheQty().isEmpty(), "List is empty");
+		assertFalse(service.groupByTheNameCountOrSumtheQty().isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void groupByPriceCollectorsGroupingByAndCollectorsMappingExample() {
-		isTrue(!service.groupByPriceCollectorsGroupingByAndCollectorsMappingExample().isEmpty(), "List is empty");
+		assertFalse(service.groupByPriceCollectorsGroupingByAndCollectorsMappingExample().isEmpty(), "List is empty");
 	}
 
 }

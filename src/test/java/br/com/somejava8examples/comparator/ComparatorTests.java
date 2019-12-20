@@ -1,11 +1,11 @@
 package br.com.somejava8examples.comparator;
 
-import static org.springframework.util.Assert.isTrue;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -19,38 +19,37 @@ public class ComparatorTests {
 
 	@Test
 	public void sortAgeWithoutLambda() {
-		isTrue(!service.sortByAge(service.getDevelopers()).isEmpty(), "List is empty");
+		assertFalse(service.sortByAge(service.getDevelopers()).isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void sortNameWithoutLambda() {
-		isTrue(!service.sortByName(service.getDevelopers()).isEmpty(), "List is empty");
+		assertFalse(service.sortByName(service.getDevelopers()).isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void sortSalaryWithoutLambda() {
-		isTrue(!service.sortBySalary(service.getDevelopers()).isEmpty(), "List is empty");
+		assertFalse(service.sortBySalary(service.getDevelopers()).isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void sortAgeWithLambda() {
-		isTrue(!serviceWithLambda.sortByAge(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
+		assertFalse(serviceWithLambda.sortByAge(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void sortNameWithLambda() {
-		isTrue(!serviceWithLambda.sortByName(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
+		assertFalse(serviceWithLambda.sortByName(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void sortSalaryWithLambda() {
-		serviceWithLambda.sortBySalary(serviceWithLambda.getDevelopers());
-		isTrue(!serviceWithLambda.sortBySalary(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
+		assertFalse(serviceWithLambda.sortBySalary(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void sortAgeReversedWithLambda() {
-		isTrue(!serviceWithLambda.sortByAgeReversed(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
+		assertFalse(serviceWithLambda.sortByAgeReversed(serviceWithLambda.getDevelopers()).isEmpty(), "List is empty");
 	}
 
 }

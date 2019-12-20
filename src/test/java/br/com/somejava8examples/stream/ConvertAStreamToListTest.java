@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import static org.springframework.util.Assert.isTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -17,12 +17,12 @@ public class ConvertAStreamToListTest {
 
     @Test
     public void convertAStreamToAListViaCollectorsToListTest() {
-        isTrue(!service.convertAStreamToAListViaCollectorsToList().isEmpty(), "List is empty");
+        assertFalse(service.convertAStreamToAListViaCollectorsToList().isEmpty(), "List is empty");
     }
 
     @Test
     public void filterANumberAndConvertItToAListTest() {
-        isTrue(!service.filterANumberAndConvertItToAList().isEmpty(), "List is empty");
+        assertFalse(service.filterANumberAndConvertItToAList().isEmpty(), "List is empty");
     }
 
 }

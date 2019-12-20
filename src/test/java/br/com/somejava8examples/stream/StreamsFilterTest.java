@@ -1,13 +1,13 @@
 package br.com.somejava8examples.stream;
 
-import static org.springframework.util.Assert.isTrue;
-
+import br.com.somejava8examples.streams.StreamsFilterService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import br.com.somejava8examples.streams.StreamsFilterService;
+import static org.springframework.util.Assert.isTrue;
 
 @SpringBootTest
 @ActiveProfiles("test")
@@ -18,12 +18,12 @@ public class StreamsFilterTest {
 
 	@Test
 	public void streamsFilterAndCollectBeforeJava8Test() {
-		isTrue(!service.streamsFilterAndCollectBeforeJava8().isEmpty(), "List is empty");
+		Assertions.assertFalse(service.streamsFilterAndCollectBeforeJava8().isEmpty(), "List is empty");
 	}
 
 	@Test
 	public void streamsFilterAndCollectNowJava8Test() {
-		isTrue(!service.streamsFilterAndCollectNowJava8().isEmpty(), "List is empty");
+		Assertions.assertFalse(service.streamsFilterAndCollectNowJava8().isEmpty(), "List is empty");
 	}
 
 	@Test
@@ -43,6 +43,6 @@ public class StreamsFilterTest {
 
 	@Test
 	public void getStreamsFilterAndMapTest() {
-		isTrue(!service.getStreamsFilterAndMap().isEmpty(), "List is empty");
+		Assertions.assertFalse(service.getStreamsFilterAndMap().isEmpty(), "List is empty");
 	}
 }
