@@ -18,11 +18,8 @@ public class StreamHasAlreadyBeenOperatedUponOrClosedTest {
     private StreamHasAlreadyBeenOperatedUponOrClosedService service;
 
     @Test
-    @DisplayName("Test Spring @Autowired Integration")
     public void streamIsClosedTest() {
-        Exception exception = assertThrows(IllegalStateException.class, () -> {
-            service.streamIsClosed();
-        });
+        Exception exception = assertThrows(IllegalStateException.class, () -> {service.streamIsClosed();});
 
         String expectedMessage = "stream has already been operated upon or closed";
         String actualMessage = exception.getMessage();
