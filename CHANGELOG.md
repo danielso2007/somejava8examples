@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/danielso2007/somejava8examples/compare/v0.0.2...v0.0.3) (2019-12-21)
+
+
+### Features
+
+* Java 8 – Convert List to Map. ([5c0fba6](https://github.com/danielso2007/somejava8examples/commit/5c0fba684ef5676200ff31f410c9d8ce5e0cef0b))
+* Java 8 – Convert Map to List. ([26fd99a](https://github.com/danielso2007/somejava8examples/commit/26fd99a02f224d10b6cd4127ab84540889cfb313))
+* Java 8 – Filter a Map examples. ([da24e19](https://github.com/danielso2007/somejava8examples/commit/da24e19267e97cb81e6915f4673f049ce37b4673))
+* Java 8 – How to sort a Map. ([bada3c2](https://github.com/danielso2007/somejava8examples/commit/bada3c2c1b4ba2f1d5069331a96f489a70963a2b))
+* Java 8 flatMap example. ([1d2e83a](https://github.com/danielso2007/somejava8examples/commit/1d2e83a0c274f69ab03f8fa382240ff7c0966a08))
+* Java 8 Optional In Depth. ([781b7e9](https://github.com/danielso2007/somejava8examples/commit/781b7e9d3c4c4a451de5f36c3514dcd577e247c0))
+
+
+### Bug Fixes
+
+* Correção no método streamStringFlatMap. ([1a954cf](https://github.com/danielso2007/somejava8examples/commit/1a954cfb5fb108b8341618f0c7afbed9e8a9e448))
+
 ### [0.0.2](https://github.com/danielso2007/somejava8examples/compare/v0.0.1...v0.0.2) (2019-12-20)
 
 
