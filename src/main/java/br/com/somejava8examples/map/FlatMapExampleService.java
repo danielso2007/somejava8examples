@@ -28,7 +28,7 @@ public class FlatMapExampleService {
         Stream<String[]> temp2 = Arrays.stream(data);
 
         //Stream<String>, GOOD!
-        Stream<String> stringStream = temp.flatMap(x -> Arrays.stream(x));
+        Stream<String> stringStream = temp2.flatMap(x -> Arrays.stream(x));
 
         Stream<String> stream2 = stringStream.filter(x -> "a".equals(x.toString()));
 
