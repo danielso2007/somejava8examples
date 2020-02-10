@@ -1,8 +1,5 @@
 name: JavaCI
 
-env:
-  MAVEN_OPT: -q
-
 on:
   # Acione o fluxo de trabalho na solicitação push ou pull,
   # mas apenas para a ramificação principal.
@@ -33,15 +30,13 @@ jobs:
     - uses: actions/checkout@master
     - name: Setup java
       uses: joschi/setup-jdk@v1
-      env:
-        CODECOVTOKEN: ${{ secrets.CODECOV_TOKEN }}
       with:
         java-version: 'openjdk11'
         architecture: 'x64'
     - name: Test with Maven
       run: |
-        mvn ${MAVEN_OPT} -am clean test jacoco:report
-        bash <(curl -s https://codecov.io/bash) -t $CODECOVTOKEN
+        mvn -q -am clean test jacoco:report
+        bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }}
   Build:
     needs: Test
     runs-on: ubuntu-latest
@@ -54,4 +49,4 @@ jobs:
         architecture: 'x64'
     - name: Build with Maven
       run: |
-        mvn ${MAVEN_OPT} -am clean package install
+        mvn -q -am clean package install
