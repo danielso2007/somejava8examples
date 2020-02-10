@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/danielso2007/somejava8examples/compare/v0.0.3...v0.1.0) (2020-02-10)
+
+
+### Features
+
+* Nova cobertura de código Java com Jacoco. ([59cd5d7](https://github.com/danielso2007/somejava8examples/commit/59cd5d7574acb204264d0bb20db8ab7ef34d352c))
+
 ### [0.0.3](https://github.com/danielso2007/somejava8examples/compare/v0.0.2...v0.0.3) (2019-12-21)
 
 
