@@ -16,3 +16,20 @@
 # Java 8 Tutorials
 
 Some Java 8 examples
+
+# Executando os testes
+
+```
+mvn -q -am clean test
+```
+
+# Gerando cobertura de código
+
+Para a cobertura de código, executar:
+```
+mvn -q -am clean test jacoco:report
+```
+
+Relatório da cobertura:
+
+[codecov.io/somejava8examples](https://codecov.io/gh/danielso2007/somejava8examples)
