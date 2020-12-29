@@ -33,3 +33,9 @@ mvn -q -am clean test jacoco:report
 Relatório da cobertura:
 
 [codecov.io/somejava8examples](https://codecov.io/gh/danielso2007/somejava8examples)
+
+# Para executar o checklist do projeto
+
+```
+mvn checkstyle:check
+```
