@@ -12,25 +12,25 @@ import org.springframework.test.context.ActiveProfiles;
 @ActiveProfiles("test")
 class SomeJava8ExamplesApplicationTest {
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
+    @BeforeAll
+    static void setUpBeforeClass() throws Exception {
+    }
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
+    @AfterAll
+    static void tearDownAfterClass() throws Exception {
+    }
 
-	@BeforeEach
-	void setUp() throws Exception {
-	}
+    @BeforeEach
+    void setUp() throws Exception {
+    }
 
-	@AfterEach
-	void tearDown() throws Exception {
-	}
+    @AfterEach
+    void tearDown() throws Exception {
+    }
 
-	@Test
-	void testMain() {
-		SomeJava8ExamplesApplication.main(new String[] {});
-	}
+    @Test
+    void testMain() {
+        SomeJava8ExamplesApplication.main(new String[] {});
+    }
 
 }

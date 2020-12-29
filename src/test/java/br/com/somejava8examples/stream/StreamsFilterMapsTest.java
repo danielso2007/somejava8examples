@@ -12,27 +12,27 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 @ActiveProfiles("test")
 public class StreamsFilterMapsTest {
 
-	@Autowired
-	private StreamsFilterMapService service;
+    @Autowired
+    private StreamsFilterMapService service;
 
-	@Test
-	public void listOfStringsToUppercaseTest() {
-		assertFalse(service.listOfStringsToUppercase().isEmpty(), "List is empty");
-	}
+    @Test
+    public void listOfStringsToUppercaseTest() {
+        assertFalse(service.listOfStringsToUppercase().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void listOfObjectsListOfStringTest() {
-		assertFalse(service.listOfObjectsListOfString().isEmpty(), "List is empty");
-	}
+    @Test
+    public void listOfObjectsListOfStringTest() {
+        assertFalse(service.listOfObjectsListOfString().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void listOfObjectsListOfOtherObjectsTest() {
-		assertFalse(service.listOfObjectsListOfOtherObjects().isEmpty(), "List is empty");
-	}
+    @Test
+    public void listOfObjectsListOfOtherObjectsTest() {
+        assertFalse(service.listOfObjectsListOfOtherObjects().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void convertInsideTheMapMethodDirectlyTest() {
-		assertFalse(service.convertInsideTheMapMethodDirectly().isEmpty(), "List is empty");
-	}
+    @Test
+    public void convertInsideTheMapMethodDirectlyTest() {
+        assertFalse(service.convertInsideTheMapMethodDirectly().isEmpty(), "List is empty");
+    }
 
 }

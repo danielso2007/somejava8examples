@@ -11,22 +11,22 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 @ActiveProfiles("test")
 public class ForEachTests {
 
-	@Autowired
-	private ForEachService service;
+    @Autowired
+    private ForEachService service;
 
-	@Test
-	public void normalWayToLoopMapTest() {
-		assertFalse(service.normalWayToLoopMap().isEmpty(), "List is empty");
-	}
+    @Test
+    public void normalWayToLoopMapTest() {
+        assertFalse(service.normalWayToLoopMap().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void normalWayToLoopMapLambdaExpressionTest() {
-		assertFalse(service.normalWayToLoopMapLambdaExpression().isEmpty(), "List is empty");
-	}
+    @Test
+    public void normalWayToLoopMapLambdaExpressionTest() {
+        assertFalse(service.normalWayToLoopMapLambdaExpression().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void forEachAndListTest() {
-		assertFalse(service.forEachAndList().isEmpty(), "List is empty");
-	}
+    @Test
+    public void forEachAndListTest() {
+        assertFalse(service.forEachAndList().isEmpty(), "List is empty");
+    }
 
 }

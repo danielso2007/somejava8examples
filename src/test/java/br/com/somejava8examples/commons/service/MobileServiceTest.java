@@ -16,42 +16,42 @@ import br.com.somejava8examples.commons.entities.ScreenResolution;
 @ActiveProfiles("test")
 public class MobileServiceTest {
 
-	@Autowired
-	private MobileService service;
+    @Autowired
+    private MobileService service;
 
-	private Mobile mobile;
+    private Mobile mobile;
 
-	@BeforeEach
-	void setUp() throws Exception {
-		this.mobile = new Mobile();
-		mobile.setId(12323L);
-		mobile.setBrand("ASDASD");
-		mobile.setName("AKJDHASKD");
-	}
+    @BeforeEach
+    void setUp() throws Exception {
+        this.mobile = new Mobile();
+        mobile.setId(12323L);
+        mobile.setBrand("ASDASD");
+        mobile.setName("AKJDHASKD");
+    }
 
-	@Test
-	void getMobileScreenWidthDisplayFeaturesNullTest() {
-		assertEquals(0, service.getMobileScreenWidth(this.mobile));
-	}
+    @Test
+    void getMobileScreenWidthDisplayFeaturesNullTest() {
+        assertEquals(0, service.getMobileScreenWidth(this.mobile));
+    }
 
-	@Test
-	void getMobileScreenWidthDisplayFeaturesScreenResolutionNullTest() {
-		DisplayFeatures displayFeatures = new DisplayFeatures();
-		displayFeatures.setSize("123px");
-		this.mobile.setDisplayFeatures(displayFeatures);
-		assertEquals(0, service.getMobileScreenWidth(this.mobile));
-	}
+    @Test
+    void getMobileScreenWidthDisplayFeaturesScreenResolutionNullTest() {
+        DisplayFeatures displayFeatures = new DisplayFeatures();
+        displayFeatures.setSize("123px");
+        this.mobile.setDisplayFeatures(displayFeatures);
+        assertEquals(0, service.getMobileScreenWidth(this.mobile));
+    }
 
-	@Test
-	void getMobileScreenWidthDisplayFeaturesScreenResolutionTest() {
-		DisplayFeatures displayFeatures = new DisplayFeatures();
-		displayFeatures.setSize("123px");
-		ScreenResolution resolution = new ScreenResolution();
-		resolution.setHeight(123);
-		resolution.setWidth(344);
-		displayFeatures.setResolution(resolution);
-		this.mobile.setDisplayFeatures(displayFeatures);
-		assertEquals(344, service.getMobileScreenWidth(this.mobile));
-	}
+    @Test
+    void getMobileScreenWidthDisplayFeaturesScreenResolutionTest() {
+        DisplayFeatures displayFeatures = new DisplayFeatures();
+        displayFeatures.setSize("123px");
+        ScreenResolution resolution = new ScreenResolution();
+        resolution.setHeight(123);
+        resolution.setWidth(344);
+        displayFeatures.setResolution(resolution);
+        this.mobile.setDisplayFeatures(displayFeatures);
+        assertEquals(344, service.getMobileScreenWidth(this.mobile));
+    }
 
 }

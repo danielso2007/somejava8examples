@@ -13,36 +13,36 @@ import static org.springframework.util.Assert.isTrue;
 @ActiveProfiles("test")
 public class StreamsFilterTest {
 
-	@Autowired
-	private StreamsFilterService service;
+    @Autowired
+    private StreamsFilterService service;
 
-	@Test
-	public void streamsFilterAndCollectBeforeJava8Test() {
-		Assertions.assertFalse(service.streamsFilterAndCollectBeforeJava8().isEmpty(), "List is empty");
-	}
+    @Test
+    public void streamsFilterAndCollectBeforeJava8Test() {
+        Assertions.assertFalse(service.streamsFilterAndCollectBeforeJava8().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void streamsFilterAndCollectNowJava8Test() {
-		Assertions.assertFalse(service.streamsFilterAndCollectNowJava8().isEmpty(), "List is empty");
-	}
+    @Test
+    public void streamsFilterAndCollectNowJava8Test() {
+        Assertions.assertFalse(service.streamsFilterAndCollectNowJava8().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void getPersonByNameLikeThisBeforeJava8Test() {
-		isTrue(service.getPersonByNameLikeThisBeforeJava8() != null, "Entity is empty");
-	}
+    @Test
+    public void getPersonByNameLikeThisBeforeJava8Test() {
+        isTrue(service.getPersonByNameLikeThisBeforeJava8() != null, "Entity is empty");
+    }
 
-	@Test
-	public void getPersonByNameLikeThisAfterJava8Test() {
-		isTrue(service.getPersonByNameLikeThisAfterJava8() == null, "Entity not is empty");
-	}
+    @Test
+    public void getPersonByNameLikeThisAfterJava8Test() {
+        isTrue(service.getPersonByNameLikeThisAfterJava8() == null, "Entity not is empty");
+    }
 
-	@Test
-	public void getPersonByNameLikeThisJava8ForMultipleConditionTest() {
-		isTrue(service.getPersonByNameLikeThisJava8ForMultipleCondition() != null, "Entity is empty");
-	}
+    @Test
+    public void getPersonByNameLikeThisJava8ForMultipleConditionTest() {
+        isTrue(service.getPersonByNameLikeThisJava8ForMultipleCondition() != null, "Entity is empty");
+    }
 
-	@Test
-	public void getStreamsFilterAndMapTest() {
-		Assertions.assertFalse(service.getStreamsFilterAndMap().isEmpty(), "List is empty");
-	}
+    @Test
+    public void getStreamsFilterAndMapTest() {
+        Assertions.assertFalse(service.getStreamsFilterAndMap().isEmpty(), "List is empty");
+    }
 }

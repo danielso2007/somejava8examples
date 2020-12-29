@@ -12,27 +12,27 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 @ActiveProfiles("test")
 public class StreamCollectorsGroupingTest {
 
-	@Autowired
-	private StreamCollectorsGroupingService service;
+    @Autowired
+    private StreamCollectorsGroupingService service;
 
-	@Test
-	public void groupByCountAndSortTest() {
-		assertFalse(service.groupByCountAndSort().isEmpty(), "List is empty");
-	}
+    @Test
+    public void groupByCountAndSortTest() {
+        assertFalse(service.groupByCountAndSort().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void sortingTest() {
-		assertFalse(service.sorting().isEmpty(), "List is empty");
-	}
+    @Test
+    public void sortingTest() {
+        assertFalse(service.sorting().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void groupByTheNameCountOrSumtheQty() {
-		assertFalse(service.groupByTheNameCountOrSumtheQty().isEmpty(), "List is empty");
-	}
+    @Test
+    public void groupByTheNameCountOrSumtheQty() {
+        assertFalse(service.groupByTheNameCountOrSumtheQty().isEmpty(), "List is empty");
+    }
 
-	@Test
-	public void groupByPriceCollectorsGroupingByAndCollectorsMappingExample() {
-		assertFalse(service.groupByPriceCollectorsGroupingByAndCollectorsMappingExample().isEmpty(), "List is empty");
-	}
+    @Test
+    public void groupByPriceCollectorsGroupingByAndCollectorsMappingExample() {
+        assertFalse(service.groupByPriceCollectorsGroupingByAndCollectorsMappingExample().isEmpty(), "List is empty");
+    }
 
 }
